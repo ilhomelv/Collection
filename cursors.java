@@ -76,13 +76,13 @@ while (it.hasNext()) {
 S.ou.t.(l)  // [BOB, Chanel, Matt, Sharon]
 
 
-Enumeration				            Iterator		                ListIterator
+Enumeration				Iterator			ListIterator
 Use only for legacy classes		Use for any Collection obj	Only for List objects
-Moves forward direction		    Moves forward direction   	Moves both directions
-Read only operation			      Read and remove		          Read, remove, Replace, add
-By using Vector Class			    By Using Iterator()		      By using ListIterator()
-hasMoreElements()			        hasNext(), next()		        9 methods.
-nextElement()				          remove()
+Moves forward direction			Moves forward direction   	Moves both directions
+Read only operation			Read and remove		        Read, remove, Replace, add
+By using Vector Class			By Using Iterator()		By using ListIterator()
+hasMoreElements()			hasNext(), next()		9 methods.
+nextElement()				remove()
 
 
 
