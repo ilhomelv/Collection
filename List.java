@@ -1,3 +1,4 @@
+/*
 List (Child of Collection Interface)
 Used to represent a group of individual objects as a single entity 
 where duplicates are allow and insertion order MUST be preserved.
@@ -13,3 +14,4 @@ int lastIndexOf(Object o)
 ListIterator listIterator();
 
 ***List has 4 SubClasses: ArrayList Class, LinkedList Class, Vector, Stack
+*/
