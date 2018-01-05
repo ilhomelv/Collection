@@ -28,8 +28,15 @@ System.out.println(arr:);	//[A,10,M,null,N]
 
 In every Collection Object System.out.print(arr) calls toString() which prints objects inside  [ ]
 Every Collection class by default implements Serializable and Cloneable interfaces
-ArrayList and Vector Class implements RandomAccess interface, RA interface is a marker interface and it is  present in java.util package and it does not contain any methods, all required ability will be provided automatically by JVM.
+ArrayList and Vector Class implements RandomAccess interface, RA interface is a marker interface 
+and it is  present in java.util package and it does not contain any methods, all required ability 
+will be provided automatically by JVM.
 
+ArrayList			Vector
+Every method non synch	Most methods are synchronized
+Multiple threads are allowed	At a time only one thread allowed to operate, thread safe
+Performance is high		Performance is slower
+Non legacy			Legacy
 
 
 
