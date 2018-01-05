@@ -3,4 +3,5 @@
 *	   - arrays can hold homogeneous object, Student [ ] s can only contain student objs
 *	   - Object type array can hold any type of object, Object [ ] obj
 *	   - array is indexed and fixed collection homogeneous elements.
+*    -	To overcome problems/limitations of Arrays we go to Collections
 */
