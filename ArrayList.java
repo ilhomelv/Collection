@@ -40,6 +40,15 @@ Non legacy			Legacy
 
 
 
+This is how we can get synchronized version of ArrayList, Map and Set Collection
+public static List synchronizedList(List L)
+public static Set synchronizedSet(Set s)
+public static Map synchronizedMap(Map m)
+ArrayList L = new ArrayList();
+List L1 = Collections.synchronizedList(L);
+L1 is synchronized, L is non synchronized
+
+
 
 
 
