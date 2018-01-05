@@ -1,11 +1,11 @@
 /*
 
-The Three Cursors of JAVA - Used to get object one by one from the Collections 
+The Three interface Cursors of JAVA - Used to get object one by one from the Collections 
 Enumeration	Used to get Objects one by one from ONLY Legacy Collection Object.
 Iterator		Used to get Obj. one by one from any Coll. Object.
 ListIterator	Used
 
-Enumeration Constructor:	Enumeration e=v.elements();
+Enumeration Constructor:	Enumeration e=vector.elements();
 Enumeration Methods:	boolean hasmoreElements();    Object nextElement();
 
 Limitations of Enumeration is that its applicable to ONLY in LEGACY classes, 
