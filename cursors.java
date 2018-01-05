@@ -84,6 +84,20 @@ By using Vector Class			By Using Iterator()		By using ListIterator()
 hasMoreElements()			hasNext(), next()		9 methods.
 nextElement()				remove()
 
+Implementation classes of cursors
+public static void main(String[] args) {
+	Vector v = new Vector();
+	Enumeration e =v.elements();
+	Iterator it = v.iterator();
+	ListIterator ltr = v.ListIterator();
+	
+	S.out (e.getClass().getName());		// java.util.Vector.$1
+	S.out (it.getClass().getName());	// java.util.Vector.$it
+	S.out (ltr.getClass().getName());	// java.util.Vector.$ltr
+}
+
+
+
 
 
 */
