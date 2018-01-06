@@ -1,7 +1,8 @@
 /*
-Set interface	is a child of Collection interface, Used to work with individual objects, 
-where duplicates are NOT allowed and the insertion order NOT preserved.	
-SET has no methods, so we have to use Collection Interface methods
+Set interface	
+	is a child of Collection interface, Used to work with individual objects, 
+	where duplicates are NOT allowed and the insertion order NOT preserved.	
+	SET has no methods, so we have to use Collection Interface methods
 
 HashSet	is a Child of Set,  
     has data structure of HashTable, null insertion is OK once only, 			
@@ -97,6 +98,14 @@ S.o.u.t(t);			// [A,B,L,Z,a]
 
 
 
+Comparison table of Set implemented classes
+Property		HashSet		LinkedHashSet		TreeSet
+underlying data str.	Hash Table	LinkedList+Hash Table	BalancedTable
+Duplicate Objects	Not allowed	Not allowed		Not allowed
+Insertion Order		Not preserved	Preserved		Not preserved
+Sorting Order		Not applicable	Not applicable		Applicable
+Heterogeneous Objs	Allowed		Allowed			Not Allowed
+Null acceptance		Allowed once	Allowed			J1.7 Now allowed
 
 
 */
