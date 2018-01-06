@@ -44,6 +44,28 @@ HashSet               VS        LinkedHashSet
 No duplicate objects		No duplicate objects
 Insertion order Not preserved   Insertion order Preserved
 
+SortedSet  interface is a child of Set, duplicates not allowed, Used to represent a 
+group of individual objects according to some sorting order
+
+SortedSet interface has 6 methods, only used for SortedSet
+Object first()	returns first element of SortedSet
+Object last()	returns last element of SortedSet		
+SortedSet headSet(Object o)	returns elements < Obj
+SortedSet tailSet(Object o)	returns elements >= Obj
+SortedSet subSet(Obj o1, Obj o2) returns elements which are >= obj1 and < obj2
+		
+Comparator comparator()	returns Comparator object that describes underlying 
+sorting technique. if we re using default sorting order, then we will get NULL.
+Default sorting order for Numbers are Ascending order, for String Alphabet order.
+
+example:
+100,101,104,106,110,115,120
+first() =>100
+last() =>120
+headSet(106) => [100,101,104]
+tailSet(106) => [106,110,115,120]
+subSet(101,115) => [101,104,106,110]
+
 
 
 
