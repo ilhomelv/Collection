@@ -67,6 +67,33 @@ tailSet(106) => [106,110,115,120]
 subSet(101,115) => [101,104,106,110]
 
 
+NavigableSet interface is a child of Set, 
+TreeSet class	is a child of NavigableSet, NO duplicates, insertion order NOT preserved, 	
+		Heterogeneous NOT allowed, underlying data structure is BalancedTree, 
+		Implements Serializable n Cloneable. All objects will be inserted based on some 
+		sorting order. NULL insertion is OK in empty TreeSet once only, however if 
+		TreeSet contains Null then there can NOT be inserted any other elements.
+		Null is NOT allowed after 1.7 version Java.
+
+TreeSet constructors	
+TreeSet t = new TreeSet();		//elements will be inserted by default sorting order
+TreeSet t = new TreeSet(Comparator c); 	//elements will be inserted according to customized 
+sorting order specified by comparator object
+TreeSet t = new TreeSet(Collection c);
+TreeSet t = new TreeSet(SortedSet s);
+Default sorting order for Numbers are Ascending order, for String Alphabet order.
+
+example:
+TreeSet t = new TreeSet();
+t.add(“A”)
+t.add(“a”)
+t.add(“B”)
+t.add(“Z”)
+t.add(“L”)
+//t.add(new Integer(10));	//CCException  heterogeneous not allowed
+//t.add)new StringBuffer(“D”);	//CCException  StringBuffer does not implement Comparable
+//t.add(null);			//NPException  Null is NOT allowed after 1.7 version
+S.o.u.t(t);			// [A,B,L,Z,a]
 
 
 
