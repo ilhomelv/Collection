@@ -171,4 +171,10 @@ class MyComparator implements Comparator {
 	}
 }
 
+
+Comparable			VS	Comparator
+Default Sorting Order			Customized Sorting Order
+compareTo() only method			compare(), equals() 2 methods.
+Implements String, Wrapper classes	Implements Collator and RuleBasedCollator
+
 */
