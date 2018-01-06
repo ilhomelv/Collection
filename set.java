@@ -1,11 +1,12 @@
 /*
-Set interface	is a child of Collection interface, Used to work with individual objects, where 			duplicates are NOT allowed and the insertion order NOT preserved.	
-		SET has no methods, so we have to use Collection Interface methods
+Set interface	is a child of Collection interface, Used to work with individual objects, 
+where duplicates are NOT allowed and the insertion order NOT preserved.	
+SET has no methods, so we have to use Collection Interface methods
 
 HashSet	is a Child of Set,  
     has data structure of HashTable, null insertion is OK once only, 			
     heterogeneous objects are allowed, Duplicates are Not allowed.
-	  implements Serializable and Cloneable Interfaces. Best for Searching ops.
+    implements Serializable and Cloneable Interfaces. Best for Searching ops.
 
 HashSet Constructors
 HashSet h = new HashSet();	//default init capacity 16  //default fill ratio 0.75 
@@ -40,7 +41,7 @@ S.o.u.t(h);		// [B, C, Z, null, 10]	insertion order preserved
 
 
 HashSet               VS        LinkedHashSet
-No duplicate objects			      No duplicate objects
+No duplicate objects		No duplicate objects
 Insertion order Not preserved   Insertion order Preserved
 
 
