@@ -27,8 +27,8 @@ S.o.u.t.(h.add(“Z”));	//false		duplicates are not allowed
 S.o.u.t(h);		// [10, C, null, Z, B]	insertion order Not preserved
 
 LinkedHashSet	is a child of HashSet, insertion order preserved, no duplicates allowed.
-			it is exactly same as HashSet including Constructors and Methods, 
-			except the Insertion order is preserved in LinkedHashSet
+		it is exactly same as HashSet including Constructors and Methods, 
+		except the Insertion order is preserved in LinkedHashSet
 example:
 LinkedHashSet h = new LinkedHashSet();
 h.add(“B”);
