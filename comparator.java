@@ -93,4 +93,82 @@ class MyComparator implements Comparator {
 }
 
 
+example3: 
+Sort by length of Objects and then print, we will use Comparator object, As 
+StringBuffer does not implement Comparable interface, so we can not use default sorting
+TreeSet t = new TreeSet(new MyComparator());
+t.add(“A”);
+t.add(new StringBuffer(“ABC”);
+t.add(new StringBuffer(“AA”);
+t.add(“XX”);
+t.add(“A”);
+S.o.u.t(t);			// [ A  AA  XX  ABC ]	
+
+class MyComparator implements Comparator {
+public int compare(Object o1, Object o2) {
+		String s1=o1.toString();
+		String s2=o2.toString();
+		int i1=s1.length();
+		int i2=s2.length();
+		if(i1<i2) return -1;
+		else if (i1>i2) return 1;
+		else return s1.compareTo(s2);
+		//return 0;	//output be: [ A  AA  ABC ] note XX disappeared, size 2.
+	}
+}
+
+example4:  
+insert and sort according to employee id and then print
+class ComComp (
+	public static void main() {
+		Employee e1 = new Employee(“Nathan”,100);
+		Employee e2 = new Employee(“Bob”,200);
+		Employee e3 = new Employee(“Chanel”,50);
+		Employee e4 = new Employee(“Vena”,150);
+		Employee e5 = new Employee(“Nathan”,100);
+		TreeSet t = new TreeSet();
+		t.add(e1);
+		t.add(e2);
+		t.add(e3);
+		t.add(e4);
+		t.add(e5);
+		S.o.u.t(t);		// [Chanel—50, Nathan—100,Vena-150, Bob—200 ]
+		
+		TreeSet t1 = new TreeSet(new MyComparator());   //sort by MyComparator rule
+		t.add(e1);
+		t.add(e2);
+		t.add(e3);
+		t.add(e4);
+		t.add(e5);
+		S.o.u.t(t1);		// [Bob—200, Chanel—50, Nathan—100, Vena—150 ]
+	}
+}
+Class Employee implements Comparable {
+	String name;
+	int eid;
+	Employee(String name, int eId) {
+		this.name=name;
+		this.eId=eId;	 }
+publicString toString() {
+	return name+ “ — “ +eId; }
+
+public int compareTo(Objet o) {
+	int eId1 = this.eId;
+	Employee e=(Employee)o;
+	int eid2 = e.eid;
+	if(eId1 < eId2) {  return -1  }		//sort by ID number Descending order
+	else if (eId1 >  eId2) {  return 1  }
+	else return  0;
+	}	
+}
+class MyComparator implements Comparator {
+	public int compare(Object o1, Object o2) {
+		Employee e1 = (Employee)o1;	
+		Employee e2 = (Employee)o2;
+		String s1 = e1.name;
+		String s2 = e2.name;
+		return s1.compareTo(s2);    //create Rule to sort alphabetically
+	}
+}
+
 */
