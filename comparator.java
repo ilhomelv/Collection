@@ -75,7 +75,7 @@ t.add(“Cindy”);
 t.add(“Tom”);
 S.o.u.t (t);		//Apple Cindy Jon Tim Tom	prints default order Alphabetical
 
-TreeSet t = new TreeSet(myComparator);
+TreeSet t = new TreeSet(new MyComparator());
 t.add(“Tim”);
 t.add(“Jon”);
 t.add(“Apple”);
