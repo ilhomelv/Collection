@@ -66,4 +66,31 @@ int compare(Object o1, Object o2) {
 	//return 0;	//Only first element will be inserted & all remaining are duplicates [10]
 
 
+example2:
+TreeSet t = new TreeSet();
+t.add(“Tim”);
+t.add(“Jon”);
+t.add(“Apple”);
+t.add(“Cindy”);
+t.add(“Tom”);
+S.o.u.t (t);		//Apple Cindy Jon Tim Tom	prints default order Alphabetical
+
+TreeSet t = new TreeSet(myComparator);
+t.add(“Tim”);
+t.add(“Jon”);
+t.add(“Apple”);
+t.add(“Cindy”);
+t.add(“Tom”);
+S.o.u.t (t);		//Tom Tim Jon Cindy Apple	prints myComparator order
+
+class MyComparator implements Comparator {
+	public int compare(Object o1,Object o2) {
+		String s1=o1.toString();	//toString() or (String) casting both works
+		String s2=(String)o2;
+		return -s1.compareTo(s2);	//reverse Alphabetical order
+		//return s2.compareTo(s1);	//reverse Alphabetical order 
+	}
+}
+
+
 */
