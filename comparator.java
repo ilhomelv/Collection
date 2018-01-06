@@ -63,7 +63,7 @@ int compare(Object o1, Object o2) {
 	Integer i2 = (Integer)o2;
 	return +1;		//[ 10, 0, 15, 5, 20, 20 ]
 	//return -1;	//Reverse of insertion order will be printed [ 20, 20, 5, 15, 0, 10 ]
-	//return 0;	//Only first element will be inserted & all remaining are duplicates
+	//return 0;	//Only first element will be inserted & all remaining are duplicates [10]
 
 
 */
