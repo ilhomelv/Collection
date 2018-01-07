@@ -1,7 +1,7 @@
 /*
 
 Collections Class	defines several methods for Collection objects, like sorting, 
-			      searching, reversing,  etc Also Known as Collections utility class.
+			searching, reversing,  etc Also Known as Collections utility class.
 
 Collections Class has Two Methods for Sorting elements for List:
 public static void sort(List L)	Sorts based on default sorting order.
@@ -32,6 +32,36 @@ public int compare(Object o1, Object o2) {
 	}
 }
 
+
+
+Collections Class has Two Methods for Searching elements for List:
+For Both Methods - Before calling binarySearch method, 
+the List must be sorted otherwise the result will be unpredictably wrong.
+public static int binarySearch(List l, Object target); //While using this method, 
+The List Object Must be  Sorted by Default Sorting Order.
+public static int binarySearch(List l, Object target, Comparator c); //While using this method, 
+The List Object Must be Sorted by Customized Sorting Order.
+ 
+Both Above Methods, Also known as Collections Class Binary Search Methods Because Search methods 
+will be using internally BinarySearch algorithm concept.
+Successful search returns index number, Unsuccessful search returns the insertion point.
+
+insertion point:		-1	-2	-3	-4	-5	-6
+target object:		A	K	M	Z	a
+element index:		0	1	2	3	4	5
+
+example1:	Sort by Default and Then Search Element Z and J
+ArrayList a = new ArrayList();
+a.add(“Z”);
+a.add(“A”);
+a.add(“M”);
+a.add(“K”);
+a.add(“a”);
+s.o.u.t(a);			// [Z,A,M,K,a]
+Collections.sort(a);
+S.o.u.t(a);			// [A,K,M,Z,a]
+S.o.u.t(Collections.binarySearch(a,”Z”));	//3	index of search target
+S.o.u.t(Collections.binarySearch(a,”J”));	//-2	index insertion point
 
 
 
