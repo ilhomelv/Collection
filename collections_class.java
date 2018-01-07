@@ -19,9 +19,18 @@ a.add(“n”);
 //a.add(new Integer(10));;	//CCException   only homogeneous same type objects allowed
 //a.add(null);			//NPException  null insertion NOT allowed
 S.o.u.t(a+”before sorting”);		// [z,a,k,n]	//insertion order preserved
-Collections.sort(a);					
-S.o.u.t(a+”after sorting”);		// [a,k,n,z]	//default sorting order
+//Collections.sort(a);
+//S.o.u.t(a+”after sorting”);		// [a,k,n,z]	//default sorting order
+Collections.sort(a, new MyComparator());
+S.o.u.t(a+”after sorting”);		// [z,n,k,a]	//customized sorting order
 
+class MyComparator implements Comparator {
+public int compare(Object o1, Object o2) {
+	String s1= (String)o1;
+	String s2=o2.toString();
+	return s2.compareTo(s1);			//returns reverse alphabetical order
+	}
+}
 
 
 
