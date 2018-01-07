@@ -65,4 +65,30 @@ S.o.u.t(Collections.binarySearch(a,”J”));	//-2	index insertion point
 
 
 
+example2:	Sort by Customized order, and Then Search 10 and 13
+ArrayList a = new ArrayList();
+a.add(15);
+a.add(0);
+a.add(20);
+a.add(10);
+a.add(5);
+s.o.u.t(a);		// [15,0,20,10,5]
+Collections.sort(a, new MyComparator());
+S.o.u.t(a);		// [20,15,10,5,0]	numbers in desc order
+
+S.o.u.t(Collections.binarySearch(a,10, new MyComparator()));	//2 index number
+S.o.u.t(Collections.binarySearch(a,13, new MyComparator()));	//-3 insertion point
+S.o.u.t(Collections.binarySearch(a,17);	//unpredictable WRONG output be printed, 
+				//because  new MyComparator()  is missing inside brackets
+S.o.u.t(Collections.binarySearch(a,17, new MyComparator()));	//-2 insertion point
+
+class MyComparator implements Comparator {
+	public int compare(Object o1, Object o2) {
+		Integer i1 = (Integer)o1;
+		Integer i2 = (Integer)o2;
+		return o2.compareTo(o1);		//returns numbers in descending order
+	}
+}
+
+
 */
