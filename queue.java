@@ -24,7 +24,7 @@ PriorityQueue q = new PriorityQueue(int initCap, Comparator c);
 PriorityQueue q = new PriorityQueue(SortedSet s);
 PriorityQueue q = new PriorityQueue(Collection c);
 
-example1:
+example1: Default Sorting Priority Order
 	PriorityQueue q =new PriorityQueue();
 	S.o.u.t(q.peek());		//returns null from empty queue
 	S.o.u.t(q.remove());		//returns NSEException from empty queue
@@ -36,6 +36,20 @@ example1:
 	S.o.u.t(q);			// [1,2,3….10]
 
 
+example2: Customized Priority Order
+	Priority q = new PriorityQueue(15, new MyComparator());
+	q.offer(“A”);
+	q.offer(“Z”);
+	q.offer(“L”);
+	q.offer(“B”);
+	S.o.u.t(q);				// [Z, L, B, A] 
+class MyComparator implements Comparator {
+	public int compare(Object o1, Object o2) {
+		String s1 = (String)o1;
+		String s2 = o2.toString();
+		return s2.compareTo(s1);	//reverse alphabetical order	
+	}
+}
 
 
 */
