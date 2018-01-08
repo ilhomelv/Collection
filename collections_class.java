@@ -119,5 +119,50 @@ Comparator c1 = Collections.reverseOrder(Comparator c);
 
 
 
+Arrays	Class is a utility class, and provides several utility methods for array obj.
+		Arrays must have fixed size, Arrays holds the similar data type elements ONLY
+		Arrays can hold Same type Primitives Only or Same Type Array Objects Only.
+		Arrays once created can NOT be increased nor decreased by their size.
+		Arrays use less memories, high performance.
+
+Arrays Class Methods	
+public static void sort(primitive[ ] p) 		Sorts Primitive Arrays in default sorting order
+public static void sort(Object[ ] o)			Sorts Object Arrays in default sorting order
+public static void sort(Object[ ] o, Comparator c)	Sorts by Comparator order
+
+example1: Sort int Primitive Arrays by default order and print
+	int[ ] a = {10, 5, 20, 11, 6};
+	for(int a1 : a ) {	
+		S.o.u.t(a1);	//10, 5, 20, 11, 6   primitive arrays before sorting
+		}
+	Arrays.sort(a);		//sort by default order
+	S.o.u.t(a1);		//5,6,10,11,20		primitive arrays after sorting
+
+example2:  Sort String Array Objects by Default order and print
+	String [ ] s = {“A”, ”Z”, ”B”};
+	for(String a2 : s) {
+		S.o.u.t(a2);	// A, Z, B
+	}
+	Arrays.sort(s);
+	for(String a1 : s ) {
+		S.o.u.t(a1);	//A,B,Z	 String Object Arrays after Default sorting
+	}
+//Sort by Customized reverse order and print
+	Arrays.sort(s, new MyComparator());
+	for(String a1 : s ) {
+		S.o.u.t(a1);	//Z,B,A	 String Object Arrays sorting by Comparator
+	}
+class MyComparator implements Comparator {
+	public String compare(Object o1, Object o2) {
+		String s1 = o1.toString();
+		String s2 = o2.toString();
+		return s2.compareTo(s1);	//returns reverse alphabet order
+	}	
+}
+
+
+
+
+
 
 */
