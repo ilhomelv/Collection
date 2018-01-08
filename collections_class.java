@@ -91,4 +91,11 @@ class MyComparator implements Comparator {
 }
 
 
+
+This Formula can represent the result index of Elements in List:
+Successful search results range: 0 to n-1, n is number of elements in List
+Unsuccessful search results range: -(n+1) to -1
+Total result range:	-(n+1) to n-1
+
+
 */
