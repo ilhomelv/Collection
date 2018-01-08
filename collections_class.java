@@ -195,5 +195,30 @@ class MyComparator implements Comparator {
 }
 
 
+View Arrays as List
+public static List asList(Object a)	simply VIEWS the Array Objects as List Objects.
+	Replacing Array elements with List reference is OK, But resizing the size is NOT
+	possible thru List reference, because Arrays have fixed size. 
+	Adding Heterogeneous Objects is NOT possible using List Reference, because the 
+	base internally is still Arrays, and Arrays can not hold Heterogeneous objects.
+
+Convert Collection to Array
+public Object[] a = Coll.toArray();
+
+example:
+String[ ] s ={“A”, “Z”, “B”};
+List l = Arrays.asList(s);		// if used static import then no need for word Arrays.
+S.o.u.t(l);			//[A,Z,B]
+s[0] = “K”;
+S.o.u.t(l);			//[K,Z,B]
+l.set(1,”L”);
+for(String s1:s)
+S.o.u.t(s1);			//K,L,B
+//l.add(“David”);		//UsOException
+//l.remove(2);			//UException
+//l.set(1, new Integer(10));	//AStoreException
+
+
+
 
 */
