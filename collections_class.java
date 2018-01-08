@@ -162,6 +162,37 @@ class MyComparator implements Comparator {
 
 
 
+Arrays Class Binary Search Elements Methods:
+public static int binarySearch(primitive[ ] p, primitive target)
+public static int binarySearch(Object[ ] a, Object target)
+public static int binarySearch(Object[ ] a, Object target, Comparator c)
+	
+***All rules of Arrays Class BinarySearch methods are exactly same as 
+Collections Class BinarySearch methods
+
+example1:
+int[ ] a = {10,5,20,11,6};
+Arrays.sort(a);		//sort by default order
+S.o.ut(Arrays.binarySearch(a,6));		//1
+S.o.u.t(Arrays.binarySearch(a,14);		//-5
+
+example2: Sort by default order and print 
+String[ ] s ={“A”,”Z”.”B”};
+Arrays.sort(s);
+S.o.u.t(binarySearch(s,”Z”));			//2	
+S.o.u.t(binarySearch(s,”S”));			//-3
+Sort by Customized order and print
+Arrays.sort(s, new MyComparator());
+S.o.u.t(binarySearch(s,”Z”, new MyComparator()));	//0
+S.o.u,t(binarySearch(s,”S”, new MyComparator()));	//-2		//reverse sort order 
+S.o.u.t(binarySearch(s,”N”);	//wrong result,  because new MyComparator is missing
+class MyComparator implements Comparator {
+	public int compare(Object o1, Object o2) {
+	String s1 = o1.toString();
+	String s2 = 02.toString();
+	return s2.compareTo(s1);
+	}
+}
 
 
 
