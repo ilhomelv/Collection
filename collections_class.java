@@ -98,7 +98,7 @@ Unsuccessful search results range: -(n+1) to -1
 Total result range:	-(n+1) to n-1
 
 
-Reversing Elements of List:
+reverse()  VS 	reverseOrder()
 public static void reverse(List l)	Collections class has such method to reverse oder of
 					elements of the given List,
 example:
@@ -112,10 +112,10 @@ S.o.u.t(l);		// [15,0,20,10,5]
 Collections.reverse(l);				//reverses elements order of list
 S.o.u.t(l);		// [5,10,20,0,15]
 
-
 reverseOrder() is used to reverse order of comparator objects
 Comparator c1 = Collections.reverseOrder(Comparator c);
 					//c ascending order, c1 be descending order
+
 
 
 
